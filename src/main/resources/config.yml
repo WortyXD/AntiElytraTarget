@@ -1,0 +1,28 @@
+ayarlar:
+  max-ihlal: 5
+  reset-saniye: 10
+  uyari-esik: 2
+  ceza-sure-saniye: 30
+  ban-komut: "ban %oyuncu% 7d %sebep%"
+  ban-sebep: "Elytra Target Hilesi"
+  debug: false
+
+efektler:
+  yildirim: false
+  ses: true
+  partikul: false
+
+discord:
+  webhook-url: "https://discord.com/api/webhooks/1473350661373690051/IauvyQnU_Ej_LANMQ0Dntd5Ku3ueYlxMq5R3gkcjTLid-SlUdk96FleTHtezUyZ96WlZ"
+
+mesajlar:
+  uyari: "&c[!] &fÇok Hızlı Slot Değişimi Tespit Edildi! Eğer Hilen Varsa Kapat Lütfen. &7(%sayac%/%max%)"
+  ceza: "&8[&cCeza] &fPvP Yetkiniz Geçici Olarak Kaldırıldı! &7(%sure% sn)"
+  ceza-bitti: "&8[&bCraftNova&8] &aCeza Süreniz Doldu, Tekrar PvP Atabilirsiniz."
+  saldiri-yasak: "&8[&bCraftNova&8] &cCeza Süreniz Dolmadan Saldıramazsınız! &7(%kalan% sn)"
+  havai-fisek-yasak: "&8[&bCraftNova&8] &cElytra İle Uçarken Havai Fişekle Vuramazsın!"
+  yetkili-uyari: "&8[&cAntiElytraTarget&8] &b%oyuncu% &fElytra Target Şüphesi Var! &c[%sayac%/%max%]"
+  yetki-yok: "&cBunu Yapmak İçin Yetkiniz Bulunmamaktadır!"
+  yenilendi: "&aConfig Başarıyla Yenilendi!"
+  bulunamadi: "&cOyuncu bulunamadı!"
+  temizlendi: "&aVeriler temizlendi!"

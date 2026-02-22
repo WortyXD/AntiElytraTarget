@@ -1,0 +1,29 @@
+name: AntiElytraTarget
+version: '1.0.0'
+main: com.worty1.antiElytraTarget.AntiElytraTarget
+api-version: '1.21'
+author: Worty1
+description: 'Performans odaklı Elytra Target koruması'
+
+commands:
+  antielytratarget:
+    description: Ana komut
+    aliases: [aet, antielytra]
+    permission: aet.use
+    usage: /aet <yenile|durum|temizle>
+
+permissions:
+  aet.use:
+    default: true
+
+  aet.alert:
+    default: op
+    description: Şüpheli aktivite bildirimleri
+
+  aet.admin:
+    default: op
+    description: Admin komutları
+
+  aet.bypass:
+    default: false
+    description: Tespitten muaf (VERMEYİN!)
