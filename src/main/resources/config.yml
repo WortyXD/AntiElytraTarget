@@ -38,8 +38,8 @@ messages:
   punishment-finished: "&aPunishment finished"
 
 commands:
-  usage-status: "&cUsage: /aet status <player>"
-  usage-clear: "&cUsage: /aet clear <player>"
+  usage-status: "&fUsage: &b/aet status <player>"
+  usage-clear: "&fUsage: &b/aet clear <player>"
 
 help:
   header: "&6=== AntiElytraTarget ==="
