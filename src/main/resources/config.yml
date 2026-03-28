@@ -1,28 +1,48 @@
-ayarlar:
-  max-ihlal: 5
-  reset-saniye: 10
-  uyari-esik: 3
-  ceza-sure-saniye: 30
-  ban-komut: "ban %oyuncu% 7d %sebep%"
-  ban-sebep: "Elytra Target Hilesi"
+# ============================================
+# AntiElytraTarget Plugin Configuration
+# ============================================
+
+settings:
+  max-violations: 5
+  reset-seconds: 10
+  warning-threshold: 3
+  punishment-duration-seconds: 30
+  ban-command: "tempbanip %player% 7d %reason%"
+  ban-reason: "Elytra Target Cheat"
   debug: false
 
-efektler:
-  yildirim: false
-  ses: true
-  partikul: false
+effects:
+  lightning: false
+  sound: true
+  particle: false
 
 discord:
-  webhook-url: ""
+  webhook-url: "YOUR_WEBHOOK_HERE"
 
-mesajlar:
-  uyari: "&c[!] &fÇok Hızlı Slot Değişimi Tespit Edildi! Eğer Hilen Varsa Kapat Lütfen. &7(%sayac%/%max%)"
-  ceza: "&8[&cCeza] &fPvP Yetkiniz Geçici Olarak Kaldırıldı! &7(%sure% sn)"
-  ceza-bitti: "&8[&cAntiElytraTarget&8] &aCeza Süreniz Doldu, Tekrar PvP Atabilirsiniz."
-  saldiri-yasak: "&8[&cAntiElytraTarget&8] &cCeza Süreniz Dolmadan Saldıramazsınız! &7(%kalan% sn)"
-  havai-fisek-yasak: "&8[&cAntiElytraTarget&8] &cElytra İle Uçarken Havai Fişekle Vuramazsın!"
-  yetkili-uyari: "&8[&cAntiElytraTarget&8] &b%oyuncu% &fElytra Target Şüphesi Var! &c[%sayac%/%max%]"
-  yetki-yok: "&cBunu Yapmak İçin Yetkiniz Bulunmamaktadır!"
-  yenilendi: "&aConfig Başarıyla Yenilendi!"
-  bulunamadi: "&cOyuncu bulunamadı!"
-  temizlendi: "&aVeriler temizlendi!"
+messages:
+  warning: "&c[!] &fVery Fast Slot Switching Detected! &7(%count%/%max%)"
+  punishment: "&8[&cPunishment] &fYour PvP Ability Has Been Disabled! &7(%duration% sec)"
+  punishment-ended: "&aYour punishment has ended."
+  attack-blocked: "&cYou cannot attack! &7(%remaining% sec)"
+  firework-blocked: "&cYou cannot use fireworks while gliding!"
+  staff-warning: "&b%player% &fsuspected! &c[%count%/%max%]"
+  no-permission: "&cNo permission!"
+  reloaded: "&aConfig reloaded!"
+  player-not-found: "&cPlayer not found!"
+  data-cleared: "&aData cleared!"
+  no-data: "&7No data"
+  violation-info: "&eViolations: &c%violations%"
+  last-switch: "&eLast switch: &7%ms% ms ago"
+  punishment-active: "&cPunishment: %remaining%s"
+  punishment-none: "&aNo punishment"
+  punishment-finished: "&aPunishment finished"
+
+commands:
+  usage-status: "&cUsage: /aet status <player>"
+  usage-clear: "&cUsage: /aet clear <player>"
+
+help:
+  header: "&6=== AntiElytraTarget ==="
+  reload: "&e/aet reload &7- Reload config"
+  status: "&e/aet status <player> &7- Show status"
+  clear: "&e/aet clear <player> &7- Clear data"
