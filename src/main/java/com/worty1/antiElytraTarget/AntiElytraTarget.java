@@ -1,4 +1,3 @@
-// TAM KOD — yorum yok, her şey configten
 package com.worty1.antiElytraTarget;
 
 import org.bukkit.*;
