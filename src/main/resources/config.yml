@@ -31,9 +31,9 @@ messages:
   player-not-found: "&cPlayer not found!"
   data-cleared: "&aData cleared!"
   no-data: "&7No data"
-  violation-info: "&eViolations: &c%violations%"
-  last-switch: "&eLast switch: &7%ms% ms ago"
-  punishment-active: "&cPunishment: %remaining%s"
+  violation-info: "&fViolations: &c%violations%"
+  last-switch: "&fLast switch: &7%ms% ms ago"
+  punishment-active: "&fPunishment: &b%remaining%s"
   punishment-none: "&aNo punishment"
   punishment-finished: "&aPunishment finished"
 
