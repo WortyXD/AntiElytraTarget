@@ -9,7 +9,6 @@ import org.bukkit.event.player.*;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
-
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -18,7 +17,6 @@ import java.util.*;
 import java.util.concurrent.*;
 
 public final class AntiElytraTarget extends JavaPlugin implements Listener {
-
     private static AntiElytraTarget instance;
     private final Map<UUID, PlayerData> playerData = new ConcurrentHashMap<>();
     private final Map<UUID, Long> punishedPlayers = new ConcurrentHashMap<>();
@@ -58,7 +56,6 @@ public final class AntiElytraTarget extends JavaPlugin implements Listener {
         cache.banReason = getConfig().getString("settings.ban-reason");
         cache.discordWebhook = getConfig().getString("discord.webhook-url");
         cache.debug = getConfig().getBoolean("settings.debug");
-
         cache.msgWarning = color(getConfig().getString("messages.warning"));
         cache.msgPunished = color(getConfig().getString("messages.punishment"));
         cache.msgPunishEnded = color(getConfig().getString("messages.punishment-ended"));
@@ -69,22 +66,18 @@ public final class AntiElytraTarget extends JavaPlugin implements Listener {
         cache.msgReload = color(getConfig().getString("messages.reloaded"));
         cache.msgNotFound = color(getConfig().getString("messages.player-not-found"));
         cache.msgCleared = color(getConfig().getString("messages.data-cleared"));
-
         cache.msgNoData = color(getConfig().getString("messages.no-data"));
         cache.msgViolationInfo = color(getConfig().getString("messages.violation-info"));
         cache.msgLastSwitch = color(getConfig().getString("messages.last-switch"));
         cache.msgPunishActive = color(getConfig().getString("messages.punishment-active"));
         cache.msgPunishNone = color(getConfig().getString("messages.punishment-none"));
         cache.msgPunishFinished = color(getConfig().getString("messages.punishment-finished"));
-
         cache.cmdUsageStatus = color(getConfig().getString("commands.usage-status"));
         cache.cmdUsageClear = color(getConfig().getString("commands.usage-clear"));
-
         cache.helpHeader = color(getConfig().getString("help.header"));
         cache.helpReload = color(getConfig().getString("help.reload"));
         cache.helpStatus = color(getConfig().getString("help.status"));
         cache.helpClear = color(getConfig().getString("help.clear"));
-
         cache.effectLightning = getConfig().getBoolean("effects.lightning");
         cache.effectSound = getConfig().getBoolean("effects.sound");
         cache.effectParticle = getConfig().getBoolean("effects.particle");
@@ -137,13 +130,9 @@ public final class AntiElytraTarget extends JavaPlugin implements Listener {
     }
 
     private void alert(Player p, int v) {
-        String msg = cache.msgStaffAlert.replace("%player%", p.getName())
-                .replace("%count%", v+"")
-                .replace("%max%", cache.maxViolations+"");
+        String msg = cache.msgStaffAlert.replace("%player%", p.getName()).replace("%count%", v+"").replace("%max%", cache.maxViolations+"");
 
-        Bukkit.getOnlinePlayers().stream()
-                .filter(pl -> pl.hasPermission("aet.alert"))
-                .forEach(pl -> pl.sendMessage(msg));
+        Bukkit.getOnlinePlayers().stream().filter(pl -> pl.hasPermission("aet.alert")).forEach(pl -> pl.sendMessage(msg));
     }
 
     private String color(String s) {
@@ -157,16 +146,14 @@ public final class AntiElytraTarget extends JavaPlugin implements Listener {
     private static class ConfigCache {
         int maxViolations, warnThreshold;
         long resetMillis, punishDuration;
-        String banCommand, banReason, discordWebhook;
+        
         boolean debug, effectLightning, effectSound, effectParticle;
 
+        String banCommand, banReason, discordWebhook;
         String msgWarning, msgPunished, msgPunishEnded, msgCannotAttack, msgFireworkBlock;
         String msgStaffAlert, msgNoPerm, msgReload, msgNotFound, msgCleared;
-
         String msgNoData, msgViolationInfo, msgLastSwitch, msgPunishActive, msgPunishNone, msgPunishFinished;
-
         String cmdUsageStatus, cmdUsageClear;
-
         String helpHeader, helpReload, helpStatus, helpClear;
     }
 
