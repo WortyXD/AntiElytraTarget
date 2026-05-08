@@ -131,7 +131,6 @@ public final class AntiElytraTarget extends JavaPlugin implements Listener {
 
     private void alert(Player p, int v) {
         String msg = cache.msgStaffAlert.replace("%player%", p.getName()).replace("%count%", v+"").replace("%max%", cache.maxViolations+"");
-
         Bukkit.getOnlinePlayers().stream().filter(pl -> pl.hasPermission("aet.alert")).forEach(pl -> pl.sendMessage(msg));
     }
 
