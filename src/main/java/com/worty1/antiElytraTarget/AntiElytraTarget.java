@@ -145,9 +145,7 @@ public final class AntiElytraTarget extends JavaPlugin implements Listener {
     private static class ConfigCache {
         int maxViolations, warnThreshold;
         long resetMillis, punishDuration;
-        
         boolean debug, effectLightning, effectSound, effectParticle;
-
         String banCommand, banReason, discordWebhook;
         String msgWarning, msgPunished, msgPunishEnded, msgCannotAttack, msgFireworkBlock;
         String msgStaffAlert, msgNoPerm, msgReload, msgNotFound, msgCleared;
